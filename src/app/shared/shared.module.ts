@@ -8,32 +8,46 @@ import { DropdownModule } from 'primeng/dropdown';
 import { CardModule } from 'primeng/card';
 import { PrimaryButtonComponent } from './components/primary-button/primary-button.component';
 
+
+// shared-imports.ts
+
+
+export const SHARED_IMPORTS = [
+  CommonModule,
+  ButtonModule,
+  RippleModule,
+  InputTextModule,
+  DropdownModule,
+  CardModule,
+  PrimaryButtonComponent
+];
+
 // Example shared component
 //import { PrimaryButtonComponent } from './components/primary-button/primary-button.component';
 
-// @Component
-@NgModule({
-  // declarations: [
-  //   //PrimaryButtonComponent
-  // ],
-  imports: [
-    CommonModule,
-    ButtonModule,
-    RippleModule,
-    InputTextModule,
-    DropdownModule,
-    CardModule
-  , PrimaryButtonComponent
+// // @Component
+// @NgModule({
+//   // declarations: [
+//   //   //PrimaryButtonComponent
+//   // ],
+//   imports: [
+//     CommonModule,
+//     ButtonModule,
+//     RippleModule,
+//     InputTextModule,
+//     DropdownModule,
+//     CardModule
+//   , PrimaryButtonComponent
 
-  ],
-  exports: [
-    CommonModule,
-    ButtonModule,
-    RippleModule,
-    InputTextModule,
-    DropdownModule,
-    CardModule
-  , PrimaryButtonComponent
-  ]
-})
-export class SharedModule {}
+//   ],
+//   exports: [
+//     CommonModule,
+//     ButtonModule,
+//     RippleModule,
+//     InputTextModule,
+//     DropdownModule,
+//     CardModule
+//   , PrimaryButtonComponent
+//   ]
+// })
+// export class SharedModule {}

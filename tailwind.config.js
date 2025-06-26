@@ -7,5 +7,13 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+fontFamily: {
+  sans: ['Poppins', 'sans-serif'], // أو الخط اللي يناسبك
+},
+extend: {
+  fontFamily: {
+    playfair: ['"Playfair Display"', 'serif'],
+  }
+}
 }
 

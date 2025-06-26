@@ -1,0 +1,243 @@
+<nav class="flex justify-between items-center py-4 px-8 bg-black text-white">
+  <div class="text-xl font-bold flex items-center">
+    <i class="pi pi-home text-yellow-400 mr-2    font-semibold"></i> Luxury Design
+  </div>
+  <ul class="flex space-x-6">
+    <li><a class="font-semibold" routerLink="/">Home</a></li>
+    <a class="font-semibold" [routerLink]="['/']" fragment="aboutSection">About</a>
+    <!-- <li><a href="#aboutSection">About</a></li> -->
+    <!-- <li><a routerLink="/about" fragment="aboutSection" (click)="scrollToAbout()">About</a></li> -->
+    <!-- <li><a routerLink="/about" >About</a></li> -->
+    <a class="font-semibold" [routerLink]="['/']" fragment="protoflio">Portfolio</a>
+    <!-- <li><a href="#protoflio">Portfolio</a></li> -->
+
+    <!-- <li><a routerLink="/portfolio">Portfolio</a></li> -->
+    <a class="font-semibold" [routerLink]="['/']" fragment="services">Services</a>
+    <!-- <li><a href="#services">Services</a></li> -->
+
+    <!-- <li><a routerLink="/services">Services</a></li> -->
+    <a class="font-semibold" [routerLink]="['/']" fragment="ContactSection" (click)="scrollToContact()">Contact</a>
+    <!-- <li><a href="#ContactSection">Contact</a></li> -->
+
+    <!-- <li><a routerLink="/contact">Contact</a></li> -->
+  </ul>
+  <!-- [routerLink]="['/']" fragment="ContactSection" -->
+  <!-- <button  (click)="scrollToContact()"
+  pButton label="Chat Now" class="bg-yellow-400 text-black font-bold px-4 py-2 rounded"></button>
+ -->
+
+  <button
+  (click)="scrollToContact()"
+  class="flex items-center gap-2 bg-yellow-400 text-black font-semibold px-4 py-2 rounded-full shadow hover:bg-yellow-500 transition-all duration-200"
+>
+  <i class="pi pi-comments text-lg"></i>
+  Chat Now
+</button>
+
+
+
+
+  <!-- <button pButton label="Chat Now" class="bg-yellow-400 text-black font-bold px-4 py-2 rounded"></button> -->
+</nav>
+
+<div class="relative h-[90vh] bg-cover bg-center" style="background-image: url('/assets/bg.jpg');">
+  <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white text-center p-4">
+    <h1 class="text-5xl font-bold">
+      Luxury Design <span class="text-yellow-400">Worldwide</span>
+    </h1>
+    <p class="mt-4 text-xl max-w-xl ">Transform your space into a masterpiece of elegance and sophistication</p>
+    <div class="flex space-x-4 mt-6">
+      <button pButton label="Explore Portfolio" class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded"></button>
+      <button pButton label="Get Consultation" class="border border-yellow-400 text-yellow-400 px-6 py-2 rounded"></button>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+<!-- about  -->
+<!-- <div id="aboutSection" class="bg-[#0C1323] text-white py-16 px-6 md:px-20 flex flex-col md:flex-row justify-between items-center gap-10">
+
+
+  <div class="max-w-xl space-y-6">
+    <h2 class="text-3xl font-bold">
+      <span class="text-white">About </span>
+      <span class="text-yellow-500">Our Vision</span>
+    </h2>
+    <p class="text-sm text-gray-300">
+      With over 15 years of experience in luxury interior design, we create spaces that reflect your personality while maintaining the highest standards of elegance and functionality.
+    </p>
+    <div class="flex gap-10 py-4">
+      <div>
+        <p class="text-yellow-500 text-xl font-bold">500+</p>
+        <p class="text-xs text-gray-400">Projects Completed</p>
+      </div>
+      <div>
+        <p class="text-yellow-500 text-xl font-bold">50+</p>
+        <p class="text-xs text-gray-400">Countries Served</p>
+      </div>
+    </div>
+    <button pButton type="button" label="Learn More" class="bg-yellow-500 text-black font-semibold px-4 py-2 rounded-md hover:bg-yellow-600"></button>
+  </div>
+  <img src="assets/bg2.jpg" alt="About Image" class="w-full max-w-md rounded-xl shadow-lg
+  scale-105 md:scale-110 transition-transform" />
+
+</div> -->
+
+<section id="aboutSection" class="bg-[#0D1224] text-white py-16 px-6 md:px-16">
+  <div class="grid md:grid-cols-2 gap-6 items-center">
+
+    <!-- النص -->
+    <div class="space-y-6">
+      <h2 class="text-3xl font-bold">
+        <span>About </span><span class="text-yellow-500">Our Vision</span>
+      </h2>
+      <p class="text-lg leading-relaxed text-gray-300">
+        With over 15 years of experience in luxury interior design, we create spaces that reflect your personality while maintaining the highest standards of elegance and functionality.
+      </p>
+      <div class="flex gap-12 mt-6">
+        <div>
+          <p class="text-yellow-500 text-2xl font-bold">500+</p>
+          <p class="text-sm text-gray-400">Projects Completed</p>
+        </div>
+        <div>
+          <p class="text-yellow-500 text-2xl font-bold">50+</p>
+          <p class="text-sm text-gray-400">Countries Served</p>
+        </div>
+      </div>
+      <button class="bg-yellow-500 text-black font-semibold px-6 py-2 rounded-full mt-4 hover:bg-yellow-400">
+        Learn More
+      </button>
+    </div>
+
+    <!-- الصورة -->
+    <div class="rounded-xl overflow-hidden max-w-full">
+      <img src="assets/bg2.jpg" alt="About Image" class="w-full h-auto object-cover scale-105 md:scale-110 transition-transform" />
+    </div>
+
+  </div>
+</section>
+
+
+
+
+<!-- Protofolio  -->
+
+<section id="protoflio" class="bg-black text-white py-16 text-center">
+  <h2 class="text-4xl font-semibold">
+    <span class="text-white">Our </span>
+    <span class="text-yellow-500">Portfolio</span>
+  </h2>
+  <p class="mt-2 text-lg text-slate-300">
+    Discover our latest luxury interior design projects
+  </p>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8 px-8 mt-12">
+    <img src="assets/proto1.jpg" class="rounded-lg shadow-lg w-full" />
+    <img src="assets/proto2.jpg" class="rounded-lg shadow-lg w-full" />
+    <img src="assets/proto3.jpg" class="rounded-lg shadow-lg w-full" />
+  </div>
+</section>
+
+
+
+
+<!-- Services -->
+<section id="services" class="bg-[#0b1221] text-white py-16">
+  <div class="text-center mb-12">
+    <h2 class="text-3xl font-bold">
+      <span class="text-white">Our </span>
+      <span class="text-yellow-500">Services</span>
+    </h2>
+    <p class="text-gray-300 mt-2">
+      Comprehensive luxury interior design solutions
+    </p>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4 md:px-20">
+    <div class="bg-black rounded-xl p-6">
+      <i class="pi pi-home text-yellow-500 text-6xl mb-4 " style="font-size: 6rem;"></i>
+      <h3 class="font-bold text-lg mb-2">Residential Design</h3>
+      <p class="text-gray-300 text-sm">
+        Transform your home into a luxury sanctuary with our personalized design approach.
+      </p>
+    </div>
+
+    <div class="bg-black rounded-xl p-6">
+      <i class="pi pi-building text-yellow-500 text-2xl mb-4" style="font-size: 6rem;"></i>
+      <h3 class="font-bold text-lg mb-2">Commercial Spaces</h3>
+      <p class="text-gray-300 text-sm">
+        Create impressive commercial environments that reflect your brand's excellence.
+      </p>
+    </div>
+
+    <div class="bg-black rounded-xl p-6">
+      <i class="pi pi-palette text-yellow-500 text-2xl mb-4" style="font-size: 6rem;"></i>
+      <h3 class="font-bold text-lg mb-2">Custom Furniture</h3>
+      <p class="text-gray-300 text-sm">
+        Bespoke furniture pieces designed to perfectly complement your space.
+      </p>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!-- Contact us  -->
+
+<section id="ContactSection" class="bg-black text-white py-16 px-4 md:px-20" >
+  <div class="text-center mb-10">
+    <h2 class="text-3xl font-bold">Get <span class="text-yellow-500">In Touch</span></h2>
+    <p class="text-gray-300 mt-2">Ready to transform your space? Let's discuss your vision</p>
+  </div>
+
+  <div class="grid md:grid-cols-2 gap-10">
+    <!-- Contact Info -->
+    <div class="space-y-5">
+      <h3 class="text-lg font-bold">Contact Information</h3>
+      <div class="flex items-start gap-2"><i class="pi pi-phone text-yellow-500 text-lg"></i> <span>+1 (555) 123-4567</span></div>
+      <div class="flex items-start gap-2"><i class="pi pi-envelope text-yellow-500 text-lg"></i> <span>hello&#64;luxurydesignww.com</span></div>
+      <div class="flex items-start gap-2"><i class="pi pi-map-marker text-yellow-500 text-lg"></i> <span>123 Design Avenue, New York, NY 10001</span></div>
+
+      <h3 class="mt-6 text-sm font-semibold">Follow Us</h3>
+      <div class="flex gap-4 text-yellow-500 text-xl">
+        <i class="pi pi-instagram"></i>
+        <i class="pi pi-facebook"></i>
+        <i class="pi pi-linkedin"></i>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <form class="space-y-4">
+      <input type="text" placeholder="Your Name" class="w-full p-3 rounded bg-slate-800 text-white placeholder-gray-400" />
+      <input type="email" placeholder="Your Email" class="w-full p-3 rounded bg-slate-800 text-white placeholder-gray-400" />
+      <input type="email" placeholder="Your Phone Number" class="w-full p-3 rounded bg-slate-800 text-white placeholder-gray-400" />
+      <select class="w-full p-3 rounded bg-slate-800 text-white">
+        <option disabled selected>Project Type</option>
+        <option>Residential</option>
+        <option>Commercial</option>
+        <option>Custom Furniture</option>
+      </select>
+      <br>
+      <br>
+       <span class="text-sm text-gray-400">(e.g. approximate area , and your preferred vibe or inspiration , When would you like to start?)</span>
+      <textarea rows="4" placeholder="Tell us about your project" class="w-full p-3 rounded bg-slate-800 text-white placeholder-gray-400"></textarea>
+      <button type="submit" class="bg-yellow-500 text-black py-3 px-6 rounded hover:bg-yellow-600">Send Message</button>
+    </form>
+  </div>
+</section>
+
+
+<footer class="bg-slate-900 text-white text-center py-6">
+  <div class="flex justify-center items-center gap-2 text-yellow-500 font-bold">
+    <i class="pi pi-home"></i>
+    Luxury Design Worldwide
+  </div>
+  <p class="text-sm text-gray-400 mt-2">Creating exceptional spaces that inspire and elevate your lifestyle</p>
+  <p class="text-xs text-gray-500 mt-1">© 2024 Luxury Design Worldwide. All rights reserved.</p>
+</footer>
+
+
