@@ -30,7 +30,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   selector: 'app-root',
   standalone: true,
   imports: [
-    RouterOutlet,
+    // RouterOutlet,
     TranslateModule,
     HeroComponent
 ],

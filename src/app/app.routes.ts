@@ -4,7 +4,7 @@ import { importProvidersFrom } from '@angular/core';
 
 export const routes: Routes = [
   { path: '', loadComponent: () => import('./pages/sections/hero/hero.component').then(m => m.HeroComponent) },
-  { path: 'about', loadComponent: () => import('./pages/sections/about/about.component').then(m => m.AboutComponent) },
+  // { path: 'about', loadComponent: () => import('./pages/sections/about/about.component').then(m => m.AboutComponent) },
 
   // { path: 'about', loadComponent: () => import('./pages/about/about.component').then(m => m.AboutComponent) },
   // { path: 'portfolio', loadComponent: () => import('./pages/portfolio/portfolio.component').then(m => m.PortfolioComponent) },
