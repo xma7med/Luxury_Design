@@ -14,6 +14,8 @@ import { filter } from 'rxjs/operators';
 })
 export class HeroComponent implements OnInit {
 constructor(private route: ActivatedRoute) {}
+toggleMenu = false;
+
   // constructor(private router: Router, private route: ActivatedRoute) {}
 //  ngOnInit() {
 //     this.router.events.pipe(

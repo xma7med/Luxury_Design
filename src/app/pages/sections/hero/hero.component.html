@@ -1,44 +1,49 @@
-<nav class="flex justify-between items-center py-4 px-8 bg-black text-white">
+<nav class="flex justify-between items-center py-4 px-8 bg-black text-white flex-wrap"> <!-- ✅ updated -->
   <div class="text-xl font-bold flex items-center">
-    <i class="pi pi-home text-yellow-400 mr-2    font-semibold"></i> Luxury Design
+    <i class="pi pi-home text-yellow-400 mr-2 font-semibold"></i> Luxury Design
   </div>
-  <ul class="flex space-x-6">
-    <li><a class="font-semibold" routerLink="/">Home</a></li>
-    <a class="font-semibold" [routerLink]="['/']" fragment="aboutSection">About</a>
-    <!-- <li><a href="#aboutSection">About</a></li> -->
-    <!-- <li><a routerLink="/about" fragment="aboutSection" (click)="scrollToAbout()">About</a></li> -->
-    <!-- <li><a routerLink="/about" >About</a></li> -->
-    <a class="font-semibold" [routerLink]="['/']" fragment="protoflio">Portfolio</a>
-    <!-- <li><a href="#protoflio">Portfolio</a></li> -->
 
-    <!-- <li><a routerLink="/portfolio">Portfolio</a></li> -->
-    <a class="font-semibold" [routerLink]="['/']" fragment="services">Services</a>
-    <!-- <li><a href="#services">Services</a></li> -->
+  <!-- ✅ Burger menu icon on mobile -->
+  <div class="md:hidden">
+    <button (click)="toggleMenu = !toggleMenu">
+      <i class="pi pi-bars text-2xl text-yellow-400"></i>
+    </button>
+  </div>
 
-    <!-- <li><a routerLink="/services">Services</a></li> -->
-    <a class="font-semibold" [routerLink]="['/']" fragment="ContactSection" (click)="scrollToContact()">Contact</a>
-    <!-- <li><a href="#ContactSection">Contact</a></li> -->
-
-    <!-- <li><a routerLink="/contact">Contact</a></li> -->
+  <!-- ✅ Navigation links: hidden on mobile, shown when toggleMenu is true -->
+  <ul
+    class="w-full mt-4 md:mt-0 md:flex md:space-x-6 md:w-auto"
+    [ngClass]="{ 'block': toggleMenu, 'hidden': !toggleMenu }"
+  >
+    <li><a class="block py-1 md:py-0 font-semibold" routerLink="/">Home</a></li>
+    <li><a class="block py-1 md:py-0 font-semibold" [routerLink]="['/']" fragment="aboutSection">About</a></li>
+    <li><a class="block py-1 md:py-0 font-semibold" [routerLink]="['/']" fragment="protoflio">Portfolio</a></li>
+    <li><a class="block py-1 md:py-0 font-semibold" [routerLink]="['/']" fragment="services">Services</a></li>
+    <li><a class="block py-1 md:py-0 font-semibold" [routerLink]="['/']" fragment="ContactSection" (click)="scrollToContact()">Contact</a></li>
   </ul>
-  <!-- [routerLink]="['/']" fragment="ContactSection" -->
-  <!-- <button  (click)="scrollToContact()"
-  pButton label="Chat Now" class="bg-yellow-400 text-black font-bold px-4 py-2 rounded"></button>
- -->
 
-  <button
-  (click)="scrollToContact()"
-  class="flex items-center gap-2 bg-yellow-400 text-black font-semibold px-4 py-2 rounded-full shadow hover:bg-yellow-500 transition-all duration-200"
->
-  <i class="pi pi-comments text-lg"></i>
-  Chat Now
-</button>
+  <!-- ✅ Chat button: shown only on md and up -->
+  <div class="hidden md:block">
+    <button
+      (click)="scrollToContact()"
+      class="flex items-center gap-2 bg-yellow-400 text-black font-semibold px-4 py-2 rounded-full shadow hover:bg-yellow-500 transition-all duration-200"
+    >
+      <i class="pi pi-comments text-lg"></i>
+      Chat Now
+    </button>
+  </div>
+</nav>
+
+
+
+
+
 
 
 
 
   <!-- <button pButton label="Chat Now" class="bg-yellow-400 text-black font-bold px-4 py-2 rounded"></button> -->
-</nav>
+
 
 <div class="relative h-[90vh] bg-cover bg-center" style="background-image: url('/assets/bg.jpg');">
   <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white text-center p-4">
@@ -242,5 +247,4 @@
   <p class="text-sm text-gray-400 mt-2">Creating exceptional spaces that inspire and elevate your lifestyle</p>
   <p class="text-xs text-gray-500 mt-1">© 2024 Luxury Design Worldwide. All rights reserved.</p>
 </footer>
-
 
