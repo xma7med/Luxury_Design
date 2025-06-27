@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { SHARED_IMPORTS } from '../../../shared/shared.module';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute, NavigationEnd, Router, RouterModule } from '@angular/router';
@@ -15,6 +15,7 @@ import { filter } from 'rxjs/operators';
 export class HeroComponent implements OnInit {
 constructor(private route: ActivatedRoute) {}
 toggleMenu = false;
+selectedLang = 'en'; // اللغة الافتراضية
 
 
 showOtherInput: boolean = false;
@@ -58,6 +59,14 @@ onProjectTypeChange(event: Event) {
   }
 }
 
+
+
+@Output() languageChanged = new EventEmitter<string>();
+
+  changeLang(lang: string) {
+    this.selectedLang = lang;
+    this.languageChanged.emit(lang);
+  }
 
 
 
