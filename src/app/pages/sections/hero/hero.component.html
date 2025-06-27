@@ -2,9 +2,9 @@
 
 <!--  -->
 
-<nav class="flex justify-between items-center py-4 px-8 bg-black text-white flex-wrap"> <!-- ✅ updated -->
+<nav class=" sticky top-0 z-50 flex justify-between items-center py-4 px-8 bg-black text-white flex-wrap"> <!-- ✅ updated -->
   <div class="text-xl font-bold flex items-center">
-    <i class="pi pi-home text-yellow-400 mr-2 font-semibold"></i> Luxury Design
+    <i class="pi pi-home text-yellow-400 mr-2 font-semibold" ></i> <a  [routerLink]="['/']" fragment="homesection">Luxury Design</a>
   </div>
 
 
@@ -89,7 +89,7 @@
   <!-- <button pButton label="Chat Now" class="bg-yellow-400 text-black font-bold px-4 py-2 rounded"></button> -->
 
 
-<div class="relative h-[90vh] bg-cover bg-center" style="background-image: url('assets/bg.jpg');">
+<div id="homesection" class="relative h-[90vh] bg-cover bg-center" style="background-image: url('assets/bg.jpg');">
   <div class="absolute inset-0 bg-black bg-opacity-60 flex flex-col justify-center items-center text-white text-center p-4">
     <h1 class="text-5xl font-bold">
       Luxury Design <span class="text-yellow-400">Worldwide</span>
