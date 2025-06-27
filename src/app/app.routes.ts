@@ -1,5 +1,6 @@
-import { Routes } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
 import { HeroComponent } from './pages/sections/hero/hero.component';
+import { importProvidersFrom } from '@angular/core';
 
 export const routes: Routes = [
   { path: '', loadComponent: () => import('./pages/sections/hero/hero.component').then(m => m.HeroComponent) },

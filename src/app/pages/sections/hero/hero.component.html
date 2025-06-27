@@ -8,19 +8,12 @@
   </div>
 
 
-
-
-
-
-
-
-
 <div class="bg-black text-white py-2 px-4 flex items-center justify-center gap-4 md:justify-start md:pl-20">
-  <img src="assets/countries/egypt.png" alt="Egypt" class="w-6 h-6 rounded-full border border-white" />
-  <img src="assets/countries/qatar.png" alt="France" class="w-6 h-6 rounded-full border border-white" />
-  <img src="assets/countries/uae.png" alt="UAE" class="w-6 h-6 rounded-full border border-white" />
-  <img src="assets/countries/ksa.png" alt="KSA" class="w-6 h-6 rounded-full border border-white" />
-  <img src="assets/countries/usa.png" alt="UK" class="w-6 h-6 rounded-full border border-white"/>
+  <img (click)="changeLang('ar')" src="assets/countries/egypt.png" alt="Egypt" class="w-6 h-6 rounded-full border border-white" />
+  <img (click)="changeLang('en')" src="assets/countries/qatar.png" alt="France" class="w-6 h-6 rounded-full border border-white" />
+  <img (click)="changeLang('ar')" src="assets/countries/uae.png" alt="UAE" class="w-6 h-6 rounded-full border border-white" />
+  <img (click)="changeLang('ar')" src="assets/countries/ksa.png" alt="KSA" class="w-6 h-6 rounded-full border border-white" />
+  <img (click)="changeLang('en')" src="assets/countries/usa.png" alt="UK" class="w-6 h-6 rounded-full border border-white"/>
 <span> . . . </span>
   <!-- + icon or expand button -->
   <!-- <button class="text-yellow-400 font-bold text-lg hover:underline ml-2">
@@ -41,12 +34,6 @@
 </section> -->
 
 
-
-
-
-
-
-
   <!-- ✅ Burger menu icon on mobile -->
   <div class="md:hidden">
     <button (click)="toggleMenu = !toggleMenu">
@@ -65,6 +52,31 @@
     <li><a class="block py-1 md:py-0 font-semibold" [routerLink]="['/']" fragment="services">Services</a></li>
     <li><a class="block py-1 md:py-0 font-semibold" [routerLink]="['/']" fragment="ContactSection" (click)="scrollToContact()">Contact</a></li>
   </ul>
+
+  <!-- Language  -->
+
+  <div class=" top-4 right-4 z-50 flex gap-2 items-center ml-4">
+
+  <!-- <button (click)="changeLang('en')" class="px-2 py-1 bg-yellow-400 text-black rounded">EN</button>
+  <button (click)="changeLang('ar')" class="px-2 py-1 bg-black text-yellow-400 border border-yellow-400 rounded">AR</button> -->
+ <button
+    (click)="changeLang('en')"
+    [ngClass]="selectedLang === 'en' ? 'bg-yellow-400 text-black' : 'bg-black text-yellow-400 border border-yellow-400'"
+    class="px-2 py-1 rounded"
+  >
+    EN
+  </button>
+
+  <button
+    (click)="changeLang('ar')"
+    [ngClass]="selectedLang === 'ar' ? 'bg-yellow-400 text-black' : 'bg-black text-yellow-400 border border-yellow-400'"
+    class="px-2 py-1 rounded"
+  >
+    AR
+  </button>
+
+</div>
+
 
   <!-- ✅ Chat button: shown only on md and up -->
   <div class="hidden md:block">
