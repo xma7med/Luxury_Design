@@ -35,6 +35,7 @@
             "scripts": []
           },
           "configurations": {
+            "baseHref": "/Luxury_Design/",
             "production": {
               "budgets": [
                 {
