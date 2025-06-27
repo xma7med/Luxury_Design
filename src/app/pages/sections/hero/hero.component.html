@@ -1,7 +1,51 @@
+
+
+<!--  -->
+
 <nav class="flex justify-between items-center py-4 px-8 bg-black text-white flex-wrap"> <!-- ✅ updated -->
   <div class="text-xl font-bold flex items-center">
     <i class="pi pi-home text-yellow-400 mr-2 font-semibold"></i> Luxury Design
   </div>
+
+
+
+
+
+
+
+
+
+<div class="bg-black text-white py-2 px-4 flex items-center justify-center gap-4 md:justify-start md:pl-20">
+  <img src="assets/countries/egypt.png" alt="Egypt" class="w-6 h-6 rounded-full border border-white" />
+  <img src="assets/countries/qatar.png" alt="France" class="w-6 h-6 rounded-full border border-white" />
+  <img src="assets/countries/uae.png" alt="UAE" class="w-6 h-6 rounded-full border border-white" />
+  <img src="assets/countries/ksa.png" alt="KSA" class="w-6 h-6 rounded-full border border-white" />
+  <img src="assets/countries/usa.png" alt="UK" class="w-6 h-6 rounded-full border border-white"/>
+<span> . . . </span>
+  <!-- + icon or expand button -->
+  <!-- <button class="text-yellow-400 font-bold text-lg hover:underline ml-2">
+    +
+  </button> -->
+</div>
+  <!-- <section class="bg-black py-10 px-6 text-white text-center">
+  <h2 class="text-2xl font-bold mb-6">
+    <span class="text-white">Countries We’ve </span>
+    <span class="text-yellow-500">Worked In</span>
+  </h2>
+
+  <div class="grid grid-cols-3 md:grid-cols-6 gap-4 place-items-center">
+    <img src="assets/flags/egypt.png" class="w-12 h-12 rounded-full shadow" alt="Egypt" />
+    <img src="assets/flags/france.png" class="w-12 h-12 rounded-full shadow" alt="France" />
+    <img src="assets/flags/uae.png" class="w-12 h-12 rounded-full shadow" alt="UAE" />
+  </div>
+</section> -->
+
+
+
+
+
+
+
 
   <!-- ✅ Burger menu icon on mobile -->
   <div class="md:hidden">
@@ -15,7 +59,7 @@
     class="w-full mt-4 md:mt-0 md:flex md:space-x-6 md:w-auto"
     [ngClass]="{ 'block': toggleMenu, 'hidden': !toggleMenu }"
   >
-    <li><a class="block py-1 md:py-0 font-semibold" routerLink="/">Home</a></li>
+    <!-- <li><a class="block py-1 md:py-0 font-semibold" routerLink="/">Home</a></li> -->
     <li><a class="block py-1 md:py-0 font-semibold" [routerLink]="['/']" fragment="aboutSection">About</a></li>
     <li><a class="block py-1 md:py-0 font-semibold" [routerLink]="['/']" fragment="protoflio">Portfolio</a></li>
     <li><a class="block py-1 md:py-0 font-semibold" [routerLink]="['/']" fragment="services">Services</a></li>
@@ -50,10 +94,10 @@
     <h1 class="text-5xl font-bold">
       Luxury Design <span class="text-yellow-400">Worldwide</span>
     </h1>
-    <p class="mt-4 text-xl max-w-xl ">Transform your space into a masterpiece of elegance and sophistication</p>
+    <p class="mt-4 text-xl max-w-xl ">We specialize in premium interior design solutions , from luxury homes to elegant commercial spaces ,tailored to reflect your unique lifestyle and brand identity.</p>
     <div class="flex space-x-4 mt-6">
       <button pButton label="Explore Portfolio" class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded"></button>
-      <button pButton label="Get Consultation" class="border border-yellow-400 text-yellow-400 px-6 py-2 rounded"></button>
+      <button pButton label=" Get Free Consultation " class="border border-yellow-400 text-yellow-400 px-6 py-2 rounded"></button>
     </div>
   </div>
 </div>
@@ -191,7 +235,7 @@
 
 
 
-<!-- Contact us  -->
+<!-- Contact us V1 -->
 
 
 <section id="ContactSection" class="bg-black text-white py-16 px-4 md:px-20" >
@@ -205,7 +249,12 @@
     <div class="space-y-5">
       <h3 class="text-lg font-bold">Contact Information</h3>
       <div class="flex items-start gap-2"><i class="pi pi-phone text-yellow-500 text-lg"></i> <span>+1 (555) 123-4567</span></div>
-      <div class="flex items-start gap-2"><i class="pi pi-envelope text-yellow-500 text-lg"></i> <span>hello&#64;luxurydesignww.com</span></div>
+      <div class="flex items-start gap-2"><i class="pi pi-envelope text-yellow-500 text-lg"></i>
+        <a href="mailto:luxurydesign.worldwide@gmail.com" class="hover:underline text-white">
+          LuxuryDesign.Worldwide&#64;gmail.com
+        </a>
+        <!-- <span>LuxuryDesign.Worldwide&#64;gmail.com</span>-->
+        </div>
       <div class="flex items-start gap-2"><i class="pi pi-map-marker text-yellow-500 text-lg"></i> <span>123 Design Avenue, New York, NY 10001</span></div>
 
       <h3 class="mt-6 text-sm font-semibold">Follow Us</h3>
@@ -218,17 +267,26 @@
 
     <!-- Contact Form -->
     <!-- <form action="https://formsubmit.co/cfcf5a580e717b670ede825a2c16dde7" method="POST" class="space-y-4"> -->
-    <form action="https://formsubmit.co/xma7med@gmail.com" method="POST" class="space-y-4">
+    <form action="https://formsubmit.co/luxurydesign.worldwide@gmail.com" method="POST" class="space-y-4">
 <!-- class="form-control -->
       <input name="Your Name" type="text" placeholder="Your Name" class="form-control w-full p-3 rounded bg-slate-800 text-white placeholder-gray-400" />
       <input name="Your Email" type="email" placeholder="Your Email" class="form-control w-full p-3 rounded bg-slate-800 text-white placeholder-gray-400" />
       <input name="Your Phone Number" type="text" placeholder="Your Phone Number" class=" form-controlw-full p-3 rounded bg-slate-800 text-white placeholder-gray-400" />
-      <select name="Project Type" class=" form-control w-full p-3 rounded bg-slate-800 text-white">
+      <select name="Project Type" class=" form-control w-full p-3 rounded bg-slate-800 text-white"
+       (change)="onProjectTypeChange($event)">
         <option disabled selected>Project Type</option>
         <option>Residential</option>
         <option>Commercial</option>
         <option>Custom Furniture</option>
+        <option>Other</option>
+
       </select>
+
+      <input *ngIf="showOtherInput"
+       name="Other Request"
+       type="text"
+       placeholder="Please describe your request"
+       class="form-control w-full p-3 rounded bg-slate-800 text-white placeholder-gray-400" />
       <br>
       <br>
       <span class="text-sm text-gray-400">(e.g. approximate area , and your preferred vibe or inspiration , When would you like to start?)</span>
@@ -239,6 +297,12 @@
 </section>
 
 
+
+<!-- Contact V2  -->
+
+
+
+
 <footer class="bg-slate-900 text-white text-center py-6">
   <div class="flex justify-center items-center gap-2 text-yellow-500 font-bold">
     <i class="pi pi-home"></i>
@@ -247,4 +311,5 @@
   <p class="text-sm text-gray-400 mt-2">Creating exceptional spaces that inspire and elevate your lifestyle</p>
   <p class="text-xs text-gray-500 mt-1">© 2024 Luxury Design Worldwide. All rights reserved.</p>
 </footer>
+
 

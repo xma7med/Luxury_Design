@@ -16,6 +16,13 @@ export class HeroComponent implements OnInit {
 constructor(private route: ActivatedRoute) {}
 toggleMenu = false;
 
+
+showOtherInput: boolean = false;
+
+onProjectTypeChange(event: Event) {
+  const value = (event.target as HTMLSelectElement).value;
+  this.showOtherInput = value === 'Other';
+}
   // constructor(private router: Router, private route: ActivatedRoute) {}
 //  ngOnInit() {
 //     this.router.events.pipe(
