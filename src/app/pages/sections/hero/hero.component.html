@@ -54,9 +54,21 @@
   </ul>
 
   <!-- Language  -->
-  <div class=" top-4 right-4 z-50 flex gap-2 items-center ml-4">
+
+  <!-- Old button see the new under  -->
+
   <!-- <button (click)="changeLang('en')" class="px-2 py-1 bg-yellow-400 text-black rounded">EN</button>
   <button (click)="changeLang('ar')" class="px-2 py-1 bg-black text-yellow-400 border border-yellow-400 rounded">AR</button> -->
+
+
+
+
+
+
+  <!-- This is the new button  -->
+
+
+  <!-- <div class=" top-4 right-4 z-50 flex gap-2 items-center ml-4">
  <button
     (click)="changeLang('en')"
     [ngClass]="selectedLang === 'en' ? 'bg-yellow-400 text-black' : 'bg-black text-yellow-400 border border-yellow-400'"
@@ -72,7 +84,12 @@
   >
     AR
   </button>
-</div>
+</div> -->
+
+
+
+
+
 
 
   <!-- ✅ Chat button: shown only on md and up -->
@@ -103,10 +120,27 @@
     <h1 class="text-5xl font-bold">
       Luxury Design <span class="text-yellow-400">Worldwide</span>
     </h1>
-    <p class="mt-4 text-xl max-w-xl ">We specialize in premium interior design solutions , from luxury homes to elegant commercial spaces ,tailored to reflect your unique lifestyle and brand identity.</p>
+    <p class="mt-4 text-xl max-w-xl ">
+
+      <span class="text-yellow-400">Let’s design your space! </span> We help you design your dream home   inside and out. From stunning interiors to elegant outdoor spaces, we create beautiful, functional designs that match your style and vision.
+    </p>
     <div class="flex space-x-4 mt-6">
-      <button pButton label="Explore Portfolio" class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded"></button>
-      <button pButton label=" Get Free Consultation " class="border border-yellow-400 text-yellow-400 px-6 py-2 rounded"></button>
+      <!-- <button pButton label="Explore Portfolio"  class="bg-yellow-400 text-black font-semibold px-6 py-3 rounded-full shadow-md hover:bg-yellow-300 transition duration-300"></button> -->
+       <button
+    class="bg-yellow-400 text-black font-semibold px-8 py-3 rounded-full shadow hover:bg-yellow-300 transition"
+  [routerLink]="['/']" fragment="protoflio"
+    >
+  Explore Portfolio
+       </button>
+
+      <!-- <button pButton label=" Get Free Consultation " class="border border-yellow-600 text-yellow-500 font-semibold px-6 py-3 rounded-full hover:bg-yellow-600 hover:text-black transition"></button> -->
+      <button
+    class="border border-yellow-400 text-yellow-400 font-semibold px-8 py-3 rounded-full hover:bg-yellow-400 hover:text-black transition"
+   [routerLink]="['/']" fragment="ContactSection"
+    >
+    Get Free Consultation
+  </button>
+
     </div>
   </div>
 </div>
@@ -287,6 +321,8 @@
         <option>Residential</option>
         <option>Commercial</option>
         <option>Custom Furniture</option>
+        <option>Get Free Consultation</option>
+
         <option>Other</option>
 
       </select>
